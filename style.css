@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background:#222222;
+    display: grid;
+    place-items: center;
+}
+
+:root{
+    --primaryColor: #9400ff;
+    --radius: 3px
+}
+
+.container{
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.show{
+    height: 800px;
+}
+
+.container h2{
+    font-weight: bold;
+    font-size: 20px;
+    height: auto;
+    margin-bottom: 8px;
+    display:grid;
+    place-items: center;
+}
+
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--primaryColor);
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: var(--radius);
+}
+
+.container button{
+    width: 100%;
+    height: 50px;
+    background: var(--primaryColor);
+    columns: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.container button:hover{
+    transform: translateY(2px);
+    background: rgb(201, 65, 255);
+    color: #fff;
+}
+
+.container .iconQR{
+    font-size: 120px;
+    width: auto;
+    display: grid;
+    place-items: center;
+
+}
+
+#imgBox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max_height 0.3s;
+}
+
+#imgBox img{
+    width: 100%;
+    padding: 10px;
+}
+
+#imgBox.show_img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}

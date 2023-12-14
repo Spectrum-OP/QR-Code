@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ff277df7c5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Enter Your Text or URL</h2>
+        <input type="text" placeholder="Text/URL" id="QRtext">
+        <div class="iconQR">
+            <i class="fa-solid fa-qrcode"></i>
+        </div>
+        <div id="imgBox">
+            <img src="" id="QRimage">
+        </div>
+        <button onclick="generateQR()" id="generateBtn">Generate</button>
+        <button onclick="downloadQR()" id="downloadBtn">Download</button>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
